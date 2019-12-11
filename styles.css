@@ -1,0 +1,77 @@
+body {background-color: powderblue;}
+h1   {color: blue;}
+<!-- p    {color: black;} -->
+
+.topnav {
+        text-align: center;
+}
+
+#header {
+    width: 405px;
+    height: 37px;
+    margin: auto;
+    margin-top: 15px;
+    border-left: 5px solid black;
+    border-right: 5px solid black;
+    border-top: 5px solid black;
+    text-align: center;
+    font-size: 200%;
+}
+
+#container {
+    width: 510px;
+    margin: auto;
+    border: 5px solid black;
+}
+
+#first {
+    width: 180px;
+    height: 260px;
+    float: left;
+    text-align: center;
+    font-size: 180%;
+    border-right: 5px solid black;
+
+}
+
+#second {
+    width: 180px;
+    height: 260px;
+    float: left;
+    text-align: center;
+    font-size: 180%;
+}
+
+#third {
+    width: 140px;
+    height: 260px;
+    float: left;
+    border-left: 5px solid black;
+    font-size:200%;
+    text-align: center;
+}
+
+#clear {
+    clear: both;
+}
+
+#forecast {
+    margin: auto;
+    margin-top: 50px;
+    height: 250px;
+    width: 1845px;
+    border-top: 5px solid black;
+    border-left: 5px solid black;
+    border-bottom: 5px solid black;
+}
+
+.f {
+    height: 250px;
+    width: 200px;
+    float: left;
+    text-align: center;
+    font-size: 130%;
+    border-right: 5px solid black;
+    
+}
+
