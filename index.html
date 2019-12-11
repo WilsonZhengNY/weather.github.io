@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>The Weather</title>
+        <link type="text/css" rel="stylesheet" href="http://weather123.atspace.cc/css/new.css">
+      <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+      <script src="/js/helper.js"></script>
+</head>
+
+<body>
+<h1><center>Weather</center></h1>
+
+<div class="topnav">
+
+<p></p>
+    Please Enter a City Name:
+  <input type="text" id="city_name" placeholder="Search..">
+  <button type="button" id="box_1">Submit</button>
+  <br>     
+<input type="radio" id="choice_1" name="mi" value="imperial" checked>Fahrenheit
+<input type="radio" id="choice_2" name="mi" value="metric">Celsius<br>
+<script>
+$("#city_name").keypress(function(e) {
+        if (e.which == 13) {
+                $("#box_1").click();
+                }
+        });
+
+$("#box_1").click(function() {
+        var url = $("#city_name").val();
+        find(url);
+        forecast(url);
+        console.log("a");
+        });     
+
+
+        
+        </script>
+        <script> window.onload = find("new york");
+                window.onload = forecast("new york");
+        </script>
+        <!-- <input id="scriptBox" type="text" onkeypress="return find()" /> -->
+
+
+</div>
+<div id="header"><span id="city">New York</span>, <span id="time"></span></div>
+<div id="container">
+    <div id="first"><p id="cityy"></p><p></p><span id="timee"></span>
+<p></p>Temperature:
+<p></p>Wind:
+<p></p>Sunrise:
+<p></p>Sunset:</div>
+    <div id="second"><p id="temp"></p>
+    <p id="wind"></p>
+    <p id="sunrise"></p>
+    <p id="sunset"></p>
+    <p id="precippp"></p>
+            </div>
+    <div id="third">
+    <img id="image" src="http://openweathermap.org/img/wn/13d@2x.png" alt="icon">
+    <span id="precip"></span>
+            </div>
+    <div id="clear"></div>
+</div>
+
+
+<div id="forecast">
+    <div class="f" id="one">       
+    <span id="time2"></span><br>
+    <img id="image2" src="http://openweathermap.org/img/wn/13d@2x.png" alt="icon">
+    <br><span id="precip2"></span>
+    <p id="temp2"></p>
+    <p id="wind2"></p>
+            </div>
+    <div class="f" id="two">
+    <span id="time3"></span><br>
+    <img id="image3" src="http://openweathermap.org/img/wn/13d@2x.png" alt="icon">
+    <br><span id="precip3"></span>
+    <p id="temp3"></p>
+    <p id="wind3"></p>
+            </div>
+    <div class="f" id="three">
+    <span id="time4"></span><br>
+    <img id="image4" src="http://openweathermap.org/img/wn/13d@2x.png" alt="icon">
+    <br><span id="precip4"></span>
+    <p id="temp4"></p>
+    <p id="wind4"></p>
+            </div>
+    <div class="f" id="four">
+    <span id="time5"></span><br>
+    <img id="image5" src="http://openweathermap.org/img/wn/13d@2x.png" alt="icon">
+    <br><span id="precip5"></span>
+    <p id="temp5"></p>
+    <p id="wind5"></p>
+            </div>
+    <div class="f" id="five">
+    <span id="time6"></span><br>
+    <img id="image6" src="http://openweathermap.org/img/wn/13d@2x.png" alt="icon">
+    <br><span id="precip6"></span>
+    <p id="temp6"></p>
+    <p id="wind6"></p>
+            </div>
+    <div class="f" id="six">
+    <span id="time7"></span><br>
+    <img id="image7" src="http://openweathermap.org/img/wn/13d@2x.png" alt="icon">
+    <br><span id="precip7"></span>
+    <p id="temp7"></p>
+    <p id="wind7"></p>
+            </div>
+    <div class="f" id="seven">
+    <span id="time8"></span><br>
+    <img id="image8" src="http://openweathermap.org/img/wn/13d@2x.png" alt="icon">
+    <br><span id="precip8"></span>
+    <p id="temp8"></p>
+    <p id="wind8"></p>
+            </div>
+    <div class="f" id="eight">
+    <span id="time9"></span><br>
+    <img id="image9" src="http://openweathermap.org/img/wn/13d@2x.png" alt="icon">
+    <br><span id="precip9"></span>
+    <p id="temp9"></p>
+    <p id="wind9"></p>
+            </div>
+    <div class="f" id="nine">
+    <span id="time10"></span><br>
+    <img id="image10" src="http://openweathermap.org/img/wn/13d@2x.png" alt="icon">
+    <br><span id="precip10"></span>
+    <p id="temp10"></p>
+    <p id="wind10"></p>
+            </div>
+</div>
+    
+    
+
+</body>
+</html>
