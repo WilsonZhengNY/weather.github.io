@@ -32,7 +32,7 @@ function find(val) {
             document.getElementById("sunrise").innerHTML=TimeChange(data.sys.sunrise+data.timezone);
             document.getElementById("sunset").innerHTML=TimeChange(data.sys.sunset+data.timezone);
             document.getElementById("precip").innerHTML=data.weather[0].description;
-            document.getElementById("image").src="http://openweathermap.org/img/wn/" + data.weather[0].icon + "@2x.png";
+            document.getElementById("image").src="https://openweathermap.org/img/wn/" + data.weather[0].icon + "@2x.png";
         })
         }
        
