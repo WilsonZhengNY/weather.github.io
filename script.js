@@ -14,7 +14,7 @@ function find(val) {
                 placeholder_2 = " mph";
         }
         var now = new Date();
-        fetch("http://api.openweathermap.org/data/2.5/weather?q=" + val + "&appid=d4165ac5f232bf585af32a4ba1d2e0a6&units=" + val2)
+        fetch("https://api.openweathermap.org/data/2.5/weather?q=" + val + "&appid=d4165ac5f232bf585af32a4ba1d2e0a6&units=" + val2)
         .then(response=>{
                 if (response.ok) {
                         return response.json();
@@ -47,7 +47,7 @@ function forecast(val) {
                 placeholder_1 = " °F";
                 placeholder_2 = " mph";
         }
-        fetch("http://api.openweathermap.org/data/2.5/forecast?q=" + val + "&appid=d4165ac5f232bf585af32a4ba1d2e0a6&units=" + val2 + "&cnt=9")
+        fetch("https://api.openweathermap.org/data/2.5/forecast?q=" + val + "&appid=d4165ac5f232bf585af32a4ba1d2e0a6&units=" + val2 + "&cnt=9")
         .then(response => response.json())
         .then(data => {
                 var number = 0;
