@@ -56,7 +56,7 @@ function forecast(val) {
                         document.getElementById("temp" + (number + 2).toString()).innerHTML=data.list[number].main.temp + placeholder_1;
                         document.getElementById("wind" + (number + 2).toString()).innerHTML=data.list[number].wind.speed + placeholder_2;
                         document.getElementById("precip" + (number + 2).toString()).innerHTML=data.list[number].weather[0].description;
-                        document.getElementById("image" + (number + 2).toString()).src="http://openweathermap.org/img/wn/" + data.list[number].weather[0].icon + "@2x.png";
+                        document.getElementById("image" + (number + 2).toString()).src="https://openweathermap.org/img/wn/" + data.list[number].weather[0].icon + "@2x.png";
                         }
                 
                 })
