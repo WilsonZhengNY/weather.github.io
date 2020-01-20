@@ -49,12 +49,18 @@ function forecast(val) {
         var val2 = document.querySelector('input[name="mi"]:checked').value;
         if (val2 == "metric") {
                 placeholder_1 = " °C";
-                placeholder_2 = " kph";
+                placeholder_2 = " m/s";
         } else {
                 placeholder_1 = " °F";
                 placeholder_2 = " mph";
         }
-        fetch("https://api.openweathermap.org/data/2.5/forecast?q=" + val + "&appid=d4165ac5f232bf585af32a4ba1d2e0a6&units=" + val2 + "&cnt=9")
+	
+	if (val.toLowerCase() == "troy") {
+                val = "id=5141502";
+        } else {
+                val= "q=" + val;
+        }
+        fetch("https://api.openweathermap.org/data/2.5/forecast?" + val + "&appid=d4165ac5f232bf585af32a4ba1d2e0a6&units=" + val2 + "&cnt=9")
         .then(response => response.json())
         .then(data => {
                 var number = 0;
