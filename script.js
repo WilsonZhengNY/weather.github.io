@@ -4,45 +4,7 @@ var timezone_ = 0;
 var placeholder_1 = " °F";
 var placeholder_2 = " mph";
 
-function find(val) {
-        var val2 = document.querySelector('input[name="mi"]:checked').value;
-        if (val2 == "metric") {
-                placeholder_1 = " °C";
-                placeholder_2 = " m/s";
-        } else {
-                placeholder_1 = " °F";
-                placeholder_2 = " mph";
-        }
-	
-	if (val.toLowerCase() == "troy") {
-                val = "id=5141502";
-        } else {
-                val= "q=" + val;
-        }
-	
-        var now = new Date();
-        fetch("https://api.openweathermap.org/data/2.5/weather?" + val + "&appid=d4165ac5f232bf585af32a4ba1d2e0a6&units=" + val2)
-        .then(response=>{
-                if (response.ok) {
-                        return response.json();
-                } else {
-                        alert("It appears we cannot find this city. Please check your spelling");
-                        throw new Error("AAA");
-                }
-        })
-        .then(data=> {
-            document.getElementById("city").innerHTML=data.name
-            document.getElementById("time").innerHTML=TimePrint(now.getUTCHours() + (data.timezone/3600), now.getMinutes());
-            timezone_ = data.timezone;
-            document.getElementById("temp").innerHTML=data.main.temp + placeholder_1;
-            document.getElementById("wind").innerHTML=data.wind.speed + placeholder_2;
-            document.getElementById("sunrise").innerHTML=TimeChange(data.sys.sunrise+data.timezone);
-            document.getElementById("sunset").innerHTML=TimeChange(data.sys.sunset+data.timezone);
-            document.getElementById("precip").innerHTML=data.weather[0].description;
-            document.getElementById("image").src="https://openweathermap.org/img/wn/" + data.weather[0].icon + "@2x.png";
-        })
-        }
-       
+
 
 function forecast(val) {
         var now = new Date();
