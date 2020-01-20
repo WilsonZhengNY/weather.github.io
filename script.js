@@ -1,4 +1,3 @@
-<!-- const form = document.querySelector("form"); -->
 var timezone_ = 0;
 var placeholder_1 = " °F";
 var placeholder_2 = " mph";
