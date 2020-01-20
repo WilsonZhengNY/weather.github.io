@@ -8,13 +8,20 @@ function find(val) {
         var val2 = document.querySelector('input[name="mi"]:checked').value;
         if (val2 == "metric") {
                 placeholder_1 = " °C";
-                placeholder_2 = " kph";
+                placeholder_2 = " m/s";
         } else {
                 placeholder_1 = " °F";
                 placeholder_2 = " mph";
         }
+	
+	if (val.toLowerCase() == "troy") {
+                val = "id=5141502";
+        } else {
+                val= "q=" + val;
+        }
+	
         var now = new Date();
-        fetch("https://api.openweathermap.org/data/2.5/weather?q=" + val + "&appid=d4165ac5f232bf585af32a4ba1d2e0a6&units=" + val2)
+        fetch("https://api.openweathermap.org/data/2.5/weather?" + val + "&appid=d4165ac5f232bf585af32a4ba1d2e0a6&units=" + val2)
         .then(response=>{
                 if (response.ok) {
                         return response.json();
