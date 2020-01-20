@@ -22,7 +22,7 @@ function find(val) {
         }
         
         var now = new Date();
-        fetch("http://api.openweathermap.org/data/2.5/weather?" + val + "&appid=d4165ac5f232bf585af32a4ba1d2e0a6&units=" + val2)
+        fetch("https://api.openweathermap.org/data/2.5/weather?" + val + "&appid=d4165ac5f232bf585af32a4ba1d2e0a6&units=" + val2)
         .then(response=>{
                 if (response.ok) {
                         return response.json();
@@ -40,7 +40,7 @@ function find(val) {
             document.getElementById("sunrise").innerHTML=TimeChange(data.sys.sunrise+data.timezone);
             document.getElementById("sunset").innerHTML=TimeChange(data.sys.sunset+data.timezone);
             document.getElementById("precip").innerHTML=data.weather[0].description;
-            document.getElementById("image").src="http://openweathermap.org/img/wn/" + data.weather[0].icon + "@2x.png";
+            document.getElementById("image").src="https://openweathermap.org/img/wn/" + data.weather[0].icon + "@2x.png";
         })
         }
        
