@@ -2,6 +2,39 @@ var timezone_ = 0;
 var placeholder_1 = " °F";
 var placeholder_2 = " mph";
 
+var tags = ["Chongqing", "Shanghai", "Beijing", "Chengdu", "Istanbul", "Karachi", "Guangzhou", "Dhaka", "Tokyo", "Moscow",
+        "Shenzhen", "Mumbai", "Kinshasa", "Tianjin", "Lahore", "Delhi", "Jakarta", "Dongguan", "Seoul", 
+        "Cairo", "Foshan", "Tehran", "Mexico City", "Lima", "London", "Bangalore", "New York", "Shenyang", "Wuhan",
+        "Bogota", "Ningbo", "Ho Chi Minh City", "Hong Kong", "Nanjing", "Hanoi", "Baghdad", "Bangkok", "Singapore",
+        "Saint Petersburg", "Los Angeles", "Chicago", "Houston", "Phoenix", "Philadelphia", "San Antonio",
+        "San Diego", "Dallas", "San Jose", "Austin", "Jacksonville", "Fort Worth", "Columbus", "San Francisco",
+        "Charlotte", "Indianapolis", "Seattle", "Denver", "Washington DC", "Boston", "El Paso", "Detroit", "Nashville",
+        "Portland", "Memphis", "Oklahoma City", "Las Vegas", "Louisville", "Baltimore", "Milwaukee", "Albuquerque",
+        "Tucson", "Fresno", "Mesa", "Sacramento", "Atlanta", "Kansas City", "Colorado Springs", "Miami", "Raleigh",
+        "Omaha", "Long Beach", "Virginia Beach", "Oakland", "Minneapolis", "Tulsa", "Arlington", "Tampa", "New Orleans",
+        "Paris", "Dubai", "Kuala Lumpur", "Barcelona", "Osaka", "Agra", "Amsterdam", "Mecca", "Prague", "Taipei", 
+        "Antalya", "Rome", "Phuket"];
+        
+var length = tags.length;
+
+function ac(value) { 
+        document.getElementById('datalist').innerHTML = '';  
+           
+         l=value.length; 
+
+     for (var i = 0; i<length; i++) { 
+         if(((tags[i].toLowerCase()).indexOf(value.toLowerCase()))>-1) 
+         { 
+             //comparing if input string is existing in tags[i] string 
+  
+             var node = document.createElement("option"); 
+             var val = document.createTextNode(tags[i]); 
+              node.appendChild(val); 
+  
+               document.getElementById("datalist").appendChild(node); 
+             } 
+         } 
+     } 
 function find(val) {
         var val2 = document.querySelector('input[name="mi"]:checked').value;
         if (val2 == "metric") {
