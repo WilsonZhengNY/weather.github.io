@@ -16,6 +16,26 @@
 <p></p>
     Please Enter a City Name:
   <input type="text" id="city_name" placeholder="Search..">
+<input type="text" list="datalist" onkeyup="ac(this.value)"> 
+<!-- On keyup calls the function everytime a key is released -->
+<datalist id="datalist"> 
+  
+<option value="Delhi"></option> 
+<option value="Ahemdabad"></option> 
+<option value="Punjab"></option> 
+<option value="Uttar Pradesh"></option> 
+<option value="Himachal Pradesh"></option> 
+<option value="Karnatka"></option> 
+<option value="Kerela"></option> 
+<option value="Maharashtra"></option> 
+<option value="Gujrat"></option> 
+<option value="Rajasthan"></option> 
+<option value="Bihar"></option> 
+<option value="Tamil Nadu"></option> 
+<option value="Haryana"></option> 
+  
+<!-- This data list will be edited through javascript     -->
+</datalist> 
   <button type="button" id="box_1">Submit</button>
   <br>     
 <input type="radio" id="choice_1" name="mi" value="imperial" checked>Fahrenheit
